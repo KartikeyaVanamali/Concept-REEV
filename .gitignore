@@ -1,0 +1,20 @@
+# Credentials — never commit these
+# A private key was committed to this public repo once already (317ec81).
+*.pem
+*.key
+*.ppk
+id_rsa*
+id_ecdsa*
+id_ed25519*
+*_github
+*_github.pub
+.env
+.env.*
+
+# Build / tooling scratch
+tools/
+__pycache__/
+
+# OS noise
+.DS_Store
+Thumbs.db

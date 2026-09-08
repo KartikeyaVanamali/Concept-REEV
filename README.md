@@ -1,6 +1,6 @@
-# REEV Concept — XUV 7XO Range-Extended Electric Vehicle
+# REEV Concept — XEV 9S INGLO-derived Range-Extended Electric Vehicle
 
-A concept study for a Range-Extended Electric Vehicle (REEV) built on the Mahindra INGLO platform. Daily driving runs entirely on battery. A turbocharged petrol generator takes over on long trips, delivering unlimited range without compromise.
+A concept study for a Range-Extended Electric Vehicle (REEV) on the Mahindra INGLO / XEV 9S skateboard, in XUV 7XO proportions. Daily driving runs entirely on battery. A 1.5 litre mStallion TGDi generator — not the 7XO’s 2.0 petrol — takes over on long trips. The engine never turns a wheel.
 
 > **Status:** Pre-feasibility concept. All figures are transparent design targets and calculation assumptions — not certified test results.
 
@@ -46,8 +46,10 @@ A REEV drives like a pure electric vehicle every day. The petrol engine has **no
 | File | Description |
 |---|---|
 | `index.html` | Interactive concept site with live simulator, state machine explorer, charging curves, cost model, and competitor comparison |
-| `REEV-Design-Specification.md` | Full engineering specification — architecture decisions, control laws, generator bands, BMS design, charging, safety states, cost analysis, and tax case |
-| `REEV-Concept-Introduction.pdf` | Concept introduction document |
+| `REEV-Concept-Introduction.docx` / `.pdf` | Concept introduction — executive summary, platform derivation, control law, running costs, GST proposal |
+| `pitch/index.html` | Twelve-slide meeting deck |
+| `linkedin-post.md` | Draft LinkedIn post, pin comment, and words not to use |
+| `REEV-Design-Specification.md` | Full engineering specification — architecture, control laws, cost, tax case (working file) |
 | `PowerTrainController.java` | Conceptual powertrain controller implementation |
 | `BatteryManagementSystem.java` | Conceptual BMS implementation |
 | `GeneratorManagementSystem.java` | Conceptual generator management system |
@@ -83,4 +85,7 @@ Stops trigger reactively — if the battery hits the turtle boundary before a pl
 
 ## Disclaimer
 
-This is an independent engineering concept study. It is not affiliated with or endorsed by Mahindra & Mahindra. All specifications are preliminary targets derived from publicly available data and first-principles calculations. Nothing has been tested on hardware.
+This is an independent engineering concept study. It is not affiliated with or endorsed by Mahindra & Mahindra or JSW MG Motor. All specifications are preliminary targets derived from publicly available data and first-principles calculations. Nothing has been tested on hardware.
+
+Live site: https://kartikeyavanamali.github.io/Concept-REEV/  
+Pitch deck: https://kartikeyavanamali.github.io/Concept-REEV/pitch/

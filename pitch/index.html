@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XEV 9S REEV — 12-slide pitch</title>
+  <style>
+    :root { --bg:#08111b; --panel:#111d2a; --line:#344760; --ink:#e8eef6; --muted:#9aa9bd; --accent:#5eead4; --blue:#7dd3fc; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font: 18px/1.45 Inter, ui-sans-serif, system-ui, sans-serif; }
+    .deck { height: 100%; }
+    .slide { display: none; min-height: 100%; padding: 48px 64px 80px; max-width: 1100px; margin: 0 auto; }
+    .slide.active { display: flex; flex-direction: column; justify-content: center; }
+    .kicker { color: var(--accent); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .6rem; font-weight: 700; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin: 0 0 .6rem; }
+    h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin: 0 0 .8rem; }
+    p, li { color: #d5deea; }
+    .muted { color: var(--muted); }
+    .lede { font-size: 1.15rem; max-width: 40rem; }
+    ul { padding-left: 1.15rem; }
+    li { margin: .35rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    th, td { text-align: left; padding: .5rem .55rem; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; }
+    .bar { position: fixed; bottom: 0; left: 0; right: 0; display: flex; gap: 10px; align-items: center; padding: 10px 18px; background: #0b1520cc; border-top: 1px solid var(--line); font-size: .82rem; color: var(--muted); }
+    .bar button { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: .4rem .7rem; cursor: pointer; }
+    .bar button:hover { border-color: var(--blue); }
+    .dots { flex: 1; display: flex; gap: 6px; justify-content: center; }
+    .dots span { width: 8px; height: 8px; border-radius: 50%; background: #2a3d52; }
+    .dots span.on { background: var(--accent); }
+    a { color: var(--blue); }
+    .claim { font-size: 1.35rem; color: var(--accent); font-weight: 700; max-width: 36rem; }
+    @media print {
+      .bar { display: none; }
+      .slide { display: flex !important; page-break-after: always; min-height: 100vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck" id="deck">
+
+    <section class="slide active">
+      <div class="kicker">Independent concept · no hardware</div>
+      <h1>What if the XEV 9S could go anywhere?</h1>
+      <p class="lede">A series plug-in REEV on Mahindra’s INGLO skateboard. Daily driving is electric. The engine never turns a wheel. Charging stops do not decide the trip.</p>
+      <p class="muted">First-principles planning ranges. Not affiliated with Mahindra or MG.</p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">The question</div>
+      <h2>Remove the charging veto. Keep what the 9S already does well.</h2>
+      <p>This is not a clean-sheet car and not a trim change. It is a derivative programme: half the pack, a generator in the nose, a control law that treats battery, engine, regen, and recovery as one system.</p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Who it is for</div>
+      <h2>The ICE and diesel buyer — not the BEV believer.</h2>
+      <ul>
+        <li>Diesel’s metro age clock, DPF, AdBlue.</li>
+        <li>40% GST on a large strong hybrid that still burns petrol every day.</li>
+        <li>A weekday petrol bill at the engine’s worst efficiency point.</li>
+        <li>A BEV owner with a home charger and a short commute should buy the 9S.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Three parents</div>
+      <h2>9S electricals. 7XO shape. 1.5 litre generator — not the 7XO 2.0.</h2>
+      <table>
+        <tr><th>Parent</th><th>Donates</th><th>Does not</th></tr>
+        <tr><td>XEV 9S / INGLO</td><td>Skateboard, 400 V, rear EDU, cabin</td><td>Front engine or tank</td></tr>
+        <tr><td>XUV 7XO</td><td>Silhouette, three-row package</td><td>2.0 petrol, ICE monocoque, NCAP</td></tr>
+        <tr><td>1.5 L mStallion TGDi</td><td>~163 hp family unit, generator job</td><td>A current volume home</td></tr>
+      </table>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Hardware</div>
+      <h2>Always-electric drive. 40 / 50 kWh. 105 kW generator.</h2>
+      <ul>
+        <li>RWD 170 kW · AWD 240 kW · 42 L tank · 400–465 V INGLO bus.</li>
+        <li>Six fixed HV-DC bands: 30 / 40 / 55 / 70 / 90 / 105 kW.</li>
+        <li>180 kW practical DC charge. 210 km/h is a healthy-SoC system ceiling.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">State 4</div>
+      <h2>At ~8% SoC the pack is protected.</h2>
+      <p class="claim">105 kW HV DC still holds 175+ km/h on the flat.</p>
+      <p>Battery discharge for traction is locked. The battery stays on the bus — no generator-only bypass. 100–120 km/h is the diesel *efficiency* comparison, not the power limit. Grade, headwind, and a punchy overtake are what break 175+.</p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Competition</div>
+      <h2>Same tax room as Tomahawk. Better EV product.</h2>
+      <ul>
+        <li>~2× the Tomahawk pack and EV range.</li>
+        <li>180 kW DC vs a 25 kW vehicle charge ceiling.</li>
+        <li>Always-electric drive. Series loses on highway km/l — that is structural, and stated.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Today’s GST · 40%</div>
+      <h2>Factory cost sits next to Tomahawk. No tax gift required.</h2>
+      <p>Gearbox / DHT deletion nearly pays for ~20 kWh of extra LFP. Net factory delta: at par to ~₹0.5 lakh more at scale. Aggressive RWD retail: at par to ~₹1.4 lakh above a ~₹27.8 lakh Tomahawk-class PHEV.</p>
+      <p class="muted">Planning-basis RWD is ~₹30.1–32.2 lakh ex-showroom. AWD is a different conversation.</p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Policy option · 18%</div>
+      <h2>A middle slab. Not the 5% EV rate.</h2>
+      <ul>
+        <li>Always-electric drive, no engine-to-wheel path.</li>
+        <li>Generator below 1,500 cc — the 1.5 qualifies; a 2.0 does not.</li>
+        <li>Certified EV range ≥ 270 km MIDC (planning: ~340 / ~408 km).</li>
+      </ul>
+      <p>At 18% the RWD lands on the top-diesel shelf. Exchequer still collects ~₹3.87 lakh; 40% on a niche sticker collects approximately nothing.</p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Control law</div>
+      <h2>One interacting system.</h2>
+      <ul>
+        <li>Battery answers the pedal. Generator answers sustained demand.</li>
+        <li>Smallest sufficient band. Dwell from when demand fell.</li>
+        <li>Economy 15→30%. Sport / Hills 20→35%. Sport can be refused.</li>
+        <li>Battery never electrically bypassed. V2L home backup never starts the engine.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Residuals</div>
+      <h2>Open web can name the parents. It cannot close the third vehicle.</h2>
+      <ul>
+        <li>1.5 L + PMSG in an INGLO nose designed as crush structure.</li>
+        <li>42 L tank in a floor designed around a 79 kWh pack.</li>
+        <li>Generator start in a silent cabin. NVH is the thinnest cousin carry-over.</li>
+        <li>Type approval that is neither ZEV nor 7XO ICE. GST box still a policy switch.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Ask</div>
+      <h2>Review it. Do not treat this as a build order.</h2>
+      <p class="lede">The long site is the appendix. This deck is the meeting. Next artefacts that would raise fundability: a front-bay overlay, a 35/45 °C grade energy balance, and a one-page tax / type-approval memo.</p>
+      <p><a href="../index.html">Concept site</a> · <a href="../REEV-Concept-Introduction.pdf">Introduction PDF</a></p>
+      <p class="muted">Pull it apart. That is the point.</p>
+    </section>
+
+  </div>
+
+  <div class="bar">
+    <button type="button" id="prev">Back</button>
+    <div class="dots" id="dots"></div>
+    <span id="pos">1 / 12</span>
+    <button type="button" id="next">Next</button>
+  </div>
+
+  <script>
+    const slides = [...document.querySelectorAll(".slide")];
+    const dots = document.getElementById("dots");
+    const pos = document.getElementById("pos");
+    let i = 0;
+    slides.forEach((_, n) => {
+      const d = document.createElement("span");
+      if (n === 0) d.classList.add("on");
+      dots.appendChild(d);
+    });
+    function show(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle("active", k === i));
+      [...dots.children].forEach((d, k) => d.classList.toggle("on", k === i));
+      pos.textContent = (i + 1) + " / " + slides.length;
+    }
+    document.getElementById("prev").onclick = () => show(i - 1);
+    document.getElementById("next").onclick = () => show(i + 1);
+    document.addEventListener("keydown", (e) => {
+      if (["ArrowRight", "ArrowDown", " ", "PageDown"].includes(e.key)) { e.preventDefault(); show(i + 1); }
+      if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) { e.preventDefault(); show(i - 1); }
+    });
+  </script>
+</body>
+</html>

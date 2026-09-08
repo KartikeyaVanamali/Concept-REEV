@@ -1,16 +1,34 @@
 # REEV Design Specification
-## XUV 7XO Range-Extended Electric Vehicle — Pre-Feasibility Concept
+## XEV 9S INGLO-derived Range-Extended Electric Vehicle — Pre-Feasibility Concept
 
 **Status:** Pre-feasibility concept. Every numerical value is a transparent preliminary design target or calculation assumption, not an asserted certified result. A future programme must validate through supplier data, dynamometer testing, coast-down testing, thermal testing, homologation, HIL/SIL testing, and ISO 26262 safety analysis.
+
+**Derivation, in one line:** INGLO / XEV 9S electrical skateboard; XUV 7XO body and three-row package; 1.5 litre mStallion TGDi as a generator-derivative — not the 7XO's production 2.0 litre petrol unit.
 
 **Publication note:** Section 25 identifies control mechanisms as candidate patentable subject matter, none of which has been filed. India provides no grace period for an inventor's own pre-filing disclosure. Do not publish this file, or Section 25 in any form, until the filing-or-defensive-publication decision in 25.8 has been made deliberately. The HTML concept site is the publication surface; this file is not.
 
 ---
 
+## 0. What This Concept Is Derived From
+
+This is a third vehicle argued from two production cousins and one unused family engine. It is not a clean-sheet car, and it is not a bolt-together of the XEV 9S and the XUV 7XO.
+
+| Parent | What it donates | What it does not donate |
+|--------|-----------------|-------------------------|
+| **XEV 9S / INGLO** | Skateboard, 400–465 V bus, rear EDU, HV safety, OBC, ADAS, three-row EV cabin architecture | A front engine bay, a fuel tank, or a generator crash case |
+| **XUV 7XO** | Silhouette, glasshouse, three-row package, petrol *acceptance* in this shape, tank / exhaust / EVAP as a *category* | The production 2.0 litre mStallion TGDi, the ICE monocoque, or its Bharat NCAP sign-off |
+| **1.5 litre mStallion TGDi** | Public traction rating (~163 hp / 121.5 kW, 280 Nm); family architecture; a displacement that can sit under a hypothetical sub-1,500 cc REEV GST gate | A current high-volume production home, a published BSFC map, or a generator-only calibration |
+
+The 7XO petrol is a **2.0 litre** mStallion. Using that unit in an INGLO nose would add mass, heat, and crash load the generator duty does not need. The 1.5 litre unit is the correct size for 105 kW HV DC (~117 kW crank). A later three-cylinder 1.5 litre using the 2.0's ~500 cc cylinder geometry is recorded in Section 5 as a second-generation opportunity and is **outside current concept scope**.
+
+XEV 9S and XUV 7XO share body language and cabin. They do not share a platform. Fitting 7XO-proportioned bodywork onto INGLO already required re-engineering on the production 9S. Putting a 1.5 litre engine-generator into that INGLO front end is a new crash, NVH, thermal, and type-approval event. Open-web sources can name the parents and bound the event; they cannot close it. That residual is honest, not incomplete homework.
+
+---
+
 ## 1. Vehicle Mission and Architecture
 
-- Purpose-built, three-row XUV 7XO Range-Extended Electric Vehicle (REEV).
-- Based on a purpose-adapted Mahindra INGLO skateboard, not an ICE donor conversion. The structure, crash paths, floor, thermal circuits, fuel system, range extender, and HV system must be engineered together.
+- Purpose-adapted, three-row REEV in XUV 7XO proportions on the XEV 9S / INGLO skateboard.
+- Based on a purpose-adapted Mahindra INGLO skateboard, not an ICE donor conversion. The structure, crash paths, floor, thermal circuits, fuel system, range extender, and HV system must be engineered together. This is a derivative programme, not a trim change.
 - Series-hybrid architecture: the combustion engine has no mechanical path to either axle. Wheel torque is always electric.
 - EV-first operation: when battery energy is healthy, the generator remains off. The vehicle supports home AC and public DC charging.
 - The generator supplies the HV DC bus. It can meet traction demand, support auxiliaries, and send genuine surplus to the battery.
@@ -52,7 +70,7 @@
 
 ### Common Hardware
 
-- 1.5 litre mStallion TGDi petrol range-extender engine.
+- 1.5 litre mStallion TGDi petrol range-extender engine — generator-derivative of the family 1.5, **not** a carry-over of the XUV 7XO 2.0 litre petrol unit.
 - Reference engine rating: about 163 hp / 121.5 kW peak and 280 Nm, subject to the final generator-specific calibration and durability rating.
 - 42 litre petrol tank.
 - Common engine, generator, after-treatment, control strategy, service parts, and generator bands wherever packaging permits.
@@ -458,6 +476,8 @@ Near the dynamic Turtle-energy target, a battery pulse is allowed only when all 
 
 There is no hard 172 km/h generator-only limit. Sustainable speed varies continuously with generator derating, auxiliaries, wind, grade, mass, rolling resistance, air density, temperature, and drivetrain efficiency.
 
+**Planning claim for public discussion:** on the Section 6 road-load model, with the pack discharge-locked (displayed SoC near the ~8% Turtle boundary, battery protected), 105 kW HV DC still holds **175+ km/h on calm, level ground**. The 105 kW band is therefore a high-speed charge-sustaining unit, not a 100–120 km/h limp-home motor. 100–120 km/h is the *efficiency* comparison with diesel (55–70 kW bands). 210 km/h remains a healthy-SoC *system* ceiling and still needs battery assist. Grade, headwind, heat, and acceleration from a cruise are the conditions that break 175+. See Section 13.
+
 ### State 5 — Battery Turtle / Generator Unavailable
 
 Normal entry invariant:
@@ -573,7 +593,7 @@ Suggested first warning:
 
 ## 13. Dynamic Generator-Limited Speed — No Hard 172 km/h Law
 
-172 km/h was a useful nominal result, not a control constant.
+172 km/h was a useful nominal result, not a control constant. The 105 kW HV-DC top band exists so State 4 does not collapse into a 120 km/h limp. On this model, calm/level M2 equilibrium at 105 kW is ~192 km/h; **175+ km/h is therefore inside the planning envelope** with reserve for auxiliaries. 210 km/h is not a generator-only speed.
 
 **Preliminary equilibrium checks with 105 kW output (M2, 2 kW aux):**
 
@@ -839,20 +859,23 @@ For the hypothetical over-4-metre REEV GST class requiring ≥270 km certified a
 
 *(Not a control requirement)*
 
+**How to read this section.** Two stickers, one factory. At today's 40% GST the RWD is intended to **sit next to** a priced parallel PHEV (MG Hector Tomahawk class), not under it. An 18% middle slab — between the 5% BEV rate and 40% hybrid/ICE rate — is a *favourable government position*, not a prediction and not a request for EV-rate GST. Asking for 5% would raid the BEV concession. 18% is the honest "in between" ask: always-electric drive, still a tailpipe.
+
 **Manufacturing cost envelope (mature, localised production ~75,000–100,000 units/year):**
 - Indicative RWD loaded factory cost: ~Rs 17.0–18.5 lakh
 - Indicative AWD loaded factory cost: ~Rs 18.5–20.5 lakh
 
-Manufacturing cost must never be presented as retail price.
+Manufacturing cost must never be presented as retail price. Versus a Tomahawk-class parallel PHEV, the planning story is: gearbox / DHT deletion nearly pays for ~20 kWh of extra LFP. Net factory delta is approximately at par to ~Rs 0.5 lakh more at scale. That is why 40% GST does not kill the car — it lands it in the same tax room as the PHEV.
 
 **Current-tax reference (August 2026 planning basis):**
 A >4 m hybrid/REEV is assumed to attract 40% GST, while a pure EV attracts 5%.
 
 At 40% GST with sustainable pre-GST revenue of ~Rs 21.5–23.0 lakh RWD and ~Rs 23.0–25.0 lakh AWD:
-- RWD: ~Rs 30.1–32.2 lakh ex-showroom / ~Rs 35.6–38.2 lakh Mumbai on-road
-- AWD: ~Rs 32.2–35.0 lakh ex-showroom / ~Rs 38.2–41.5 lakh Mumbai on-road
+- RWD planning basis: ~Rs 30.1–32.2 lakh ex-showroom / ~Rs 35.6–38.2 lakh Mumbai on-road
+- AWD planning basis: ~Rs 32.2–35.0 lakh ex-showroom / ~Rs 38.2–41.5 lakh Mumbai on-road
+- Aggressive RWD cost scenario: about at par to ~Rs 1.4 lakh above a ~Rs 27.8 lakh Tomahawk-class PHEV ex-showroom
 
-**Hypothetical capability-based REEV GST policy:**
+**Hypothetical capability-based REEV GST policy (the middle slab):**
 
 | Class | Proposed GST | Generator displacement | Min certified MIDC EV range |
 |-------|-------------|----------------------|----------------------------|
@@ -954,7 +977,9 @@ Initial concept matrix:
 
 ### Concept Frozen
 
+- Derivation: INGLO / XEV 9S skateboard; XUV 7XO proportions and cabin language; 1.5 litre mStallion TGDi generator-derivative. The 7XO 2.0 litre petrol unit is not the baseline engine.
 - Series REEV, no mechanical engine-wheel path, EV-first battery response, battery-coupled generator, States 1–6, and no generator-only battery bypass.
+- State 4 planning envelope: 105 kW HV DC holds 175+ km/h on calm, level ground with the pack discharge-locked near the ~8% displayed boundary. 210 km/h is a healthy-SoC system ceiling.
 - 400–465 V INGLO-class reuse; 1,000 V is outside this concept.
 - Baseline 40/50 kWh usable packs and provisional 1% upper/3% lower reserve convention; reserve is excluded from customer range and normal traction.
 - 170 kW RWD and 240 kW AWD healthy-SoC calibrations, conditional on BMS and supplier limits rather than generator contribution.
