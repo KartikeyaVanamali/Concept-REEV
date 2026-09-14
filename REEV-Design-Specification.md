@@ -1,7 +1,7 @@
 # REEV Design Specification
 ## XEV 9S INGLO-derived Range-Extended Electric Vehicle — Pre-Feasibility Concept
 
-**Status:** Pre-feasibility concept. Every numerical value is a transparent preliminary design target or calculation assumption, not an asserted certified result. A future programme must validate through supplier data, dynamometer testing, coast-down testing, thermal testing, homologation, HIL/SIL testing, and ISO 26262 safety analysis.
+**Status:** Independent, engineer-led pre-feasibility concept developed from publicly available information and first-principles calculations. It is not a production specification. Every effort has been made to keep the architecture, performance and cost assumptions grounded, but they require validation through packaging studies, supplier data, simulation, dynamometer testing and homologation. Every numerical value is a transparent preliminary design target or calculation assumption, not an asserted certified result. A future programme must additionally validate through coast-down testing, thermal testing, HIL/SIL testing, and ISO 26262 safety analysis.
 
 **Derivation, in one line:** INGLO / XEV 9S electrical skateboard; XUV 7XO body and three-row package; 1.5 litre mStallion TGDi as a generator-derivative — not the 7XO's production 2.0 litre petrol unit.
 
@@ -476,7 +476,7 @@ Near the dynamic Turtle-energy target, a battery pulse is allowed only when all 
 
 There is no hard 172 km/h generator-only limit. Sustainable speed varies continuously with generator derating, auxiliaries, wind, grade, mass, rolling resistance, air density, temperature, and drivetrain efficiency.
 
-**Planning claim for public discussion:** on the Section 6 road-load model, with the pack discharge-locked (displayed SoC near the ~8% Turtle boundary, battery protected), 105 kW HV DC still holds **175+ km/h on calm, level ground**. The 105 kW band is therefore a high-speed charge-sustaining unit, not a 100–120 km/h limp-home motor. 100–120 km/h is the *efficiency* comparison with diesel (55–70 kW bands). 210 km/h remains a healthy-SoC *system* ceiling and still needs battery assist. Grade, headwind, heat, and acceleration from a cruise are the conditions that break 175+. See Section 13.
+**Planning claim for public discussion:** on the Section 6 road-load model, with the pack discharge-locked (displayed SoC near the ~8% Turtle boundary, battery protected), 105 kW HV DC holds **~192 km/h on calm, level ground at M2**. The figure defended in public is **175+ km/h** — a floor that carries reserve for headwind, auxiliaries above the 2 kW baseline, and control margin, not the calm/level result. The 105 kW band is therefore a high-speed charge-sustaining unit, not a 100–120 km/h limp-home motor. 100–120 km/h is the *efficiency* comparison with diesel (55–70 kW bands). 210 km/h remains a healthy-SoC *system* ceiling and still needs battery assist. Grade, headwind, heat, and acceleration from a cruise are the conditions that consume that reserve. See Section 13.
 
 ### State 5 — Battery Turtle / Generator Unavailable
 
@@ -979,7 +979,7 @@ Initial concept matrix:
 
 - Derivation: INGLO / XEV 9S skateboard; XUV 7XO proportions and cabin language; 1.5 litre mStallion TGDi generator-derivative. The 7XO 2.0 litre petrol unit is not the baseline engine.
 - Series REEV, no mechanical engine-wheel path, EV-first battery response, battery-coupled generator, States 1–6, and no generator-only battery bypass.
-- State 4 planning envelope: 105 kW HV DC holds 175+ km/h on calm, level ground with the pack discharge-locked near the ~8% displayed boundary. 210 km/h is a healthy-SoC system ceiling.
+- State 4 planning envelope: 105 kW HV DC holds ~192 km/h on calm, level ground at M2 with the pack discharge-locked near the ~8% displayed boundary; 175+ km/h is the public floor after headwind, auxiliary, and control reserve. 210 km/h is a healthy-SoC system ceiling.
 - 400–465 V INGLO-class reuse; 1,000 V is outside this concept.
 - Baseline 40/50 kWh usable packs and provisional 1% upper/3% lower reserve convention; reserve is excluded from customer range and normal traction.
 - 170 kW RWD and 240 kW AWD healthy-SoC calibrations, conditional on BMS and supplier limits rather than generator contribution.
