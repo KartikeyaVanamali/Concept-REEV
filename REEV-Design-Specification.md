@@ -237,28 +237,7 @@ Step down progressively only after the demand, recovery, thermal, catalyst, and 
 - Petrol lower-heating-value reference: about 8.9 kWh/litre.
 - Warnings should be time/energy based (predicted ten-minute and five-minute generator support remaining), not based only on three litres.
 
-### Long-Term Derivative Direction — Purpose-Built Three-Cylinder Generator Engine
-
-The baseline concept uses the production 1.5 litre mStallion TGDi, a four-cylinder unit with four cylinders of approximately 375 cc each. Mahindra also produces the 2.0 litre mStallion TGDi — a four-cylinder unit with four cylinders of approximately 500 cc each — which currently powers the petrol ICE powertrain variants.
-
-The proposed derivative takes the individual cylinder architecture from the 2.0 litre unit and applies it to a purpose-built three-cylinder configuration: three cylinders of approximately 500 cc each, giving 1.5 litres total displacement. This is not a downsized version of the baseline 1.5 litre engine; it is a different geometry entirely — the same per-cylinder swept volume as the 2.0 litre mStallion, reduced to three cylinders rather than four.
-
-The thermal efficiency argument follows directly from the geometry. A 375 cc cylinder has a higher surface-to-volume ratio than a 500 cc cylinder at the same stroke-to-bore proportion. More combustion chamber surface relative to working volume means more heat rejected to coolant per cycle, lower indicated mean effective pressure, and a harder path to high BTE. The 3-cylinder 1.5 litre derivative inherits the larger, better-proportioned combustion chamber from the 2.0 litre unit, recovers that heat loss advantage, and reduces total friction through fewer reciprocating components simultaneously.
-
-On top of the geometric gain, the generator-only operating regime removes every calibration constraint that a road-following engine carries:
-
-- No cold-start driveability requirement limiting the expansion ratio. Miller cycle valve timing can be pushed further than any production traction engine tolerates.
-- No wide road-load sweep requiring combustion stability across partial throttle points. Every operating point is a pre-validated fixed island.
-- No NVH requirement across the full RPM band. Active engine mounts and acoustic enclosure can be optimised for six discrete RPM targets rather than the continuous road range.
-- Three-cylinder primary imbalance, which is unacceptable in a road-following NVH context, is managed by a balance shaft — a known solution — and does not constrain combustion design choices.
-
-The combustion strategy for this derivative would combine: a dedicated high-expansion-ratio Miller cycle (not a mild VVT offset), split injection with spray-guided stratification, and cooled EGR throughout. Split injection divides the total fuel mass for each cycle into two timed events: an early injection during the intake or early compression stroke lays down a homogeneous base charge, and a late compression injection delivers a locally rich pilot zone near the spark plug. The plug ignites the rich zone reliably; the flame front propagates into the leaner surrounding charge, achieving stable combustion at bulk lambda values — 1.15–1.40 at the lower bands — that a single continuous injection cannot sustain without misfire. At the upper bands (90–105 kW) where lambda 1 and full load are required, a single well-timed early injection producing a fully homogeneous charge is used instead; stratification is neither needed nor desirable at maximum output.
-
-Nissan's e-POWER programme is the clearest production demonstration of exactly this logic. The original Note e-POWER uses a 1.2 litre three-cylinder engine operating purely as a generator; the Qashqai and X-Trail e-POWER use a 1.5 litre three-cylinder VC-Turbo unit. In both cases Nissan deliberately chose a three-cylinder configuration for the generator role — fewer, larger cylinders at the target displacement — and attributes the BTE improvement explicitly to the fixed-point generator-only operating regime. Nissan publicly claims approximately 50% thermal efficiency for the 1.5 litre VC-Turbo in e-POWER generator duty, a figure that relies on the variable compression ratio technology unique to that engine and is not directly replicable here. The relevant comparison is the principle: Nissan confirmed in production that a purpose-designed three-cylinder generator engine operating at fixed points outperforms a general-duty engine of the same displacement on thermal efficiency. That is the same argument this derivative is making, without requiring variable compression ratio hardware.
-
-The 2.0-litre-cylinder-architecture derivative described here, with split injection and spray-guided stratification added, represents a further step in the same direction. Where the Nissan VC-Turbo achieves its headline figure through variable compression ratio, this derivative reaches for the same efficiency region through the combination of larger per-cylinder geometry (from the 2.0L mStallion), a dedicated high-expansion-ratio Miller cycle, and split injection stratified combustion — all within existing combustion hardware categories that do not require a novel mechanism.
-
-For the baseline concept, the revised BTE figures in the combustion table above are the appropriate provisional targets. The three-cylinder 500 cc derivative with split injection lean-burn Miller calibration would move those figures further — particularly at the 30–55 kW bands — and is the natural second-generation engine direction if the programme advances. That development requires a purpose-built engine programme and is outside the current concept scope. It is recorded here as a documented architectural opportunity grounded in existing Mahindra engine technology, not a speculative proposal from outside the family.
+*Long-term derivative direction — purpose-built three-cylinder generator engine: see Section 23, Engineering Decision Register.*
 
 ---
 
@@ -1015,6 +994,48 @@ Initial concept matrix:
 - Complete pack/generator/fuel/third-row CAD, CAE, crash, side-pole, rear impact, roof, underbody, wading, cooling, NVH, and serviceability evidence.
 - Confirm ARAI OVC-HEV test mass, fuel loading, all-electric break-off, variant-family/COP treatment, tax classification, and certified range.
 - Close ISO 26262 safety case, cybersecurity/CAN integrity, HIL/SIL/dyno/climatic/durability/homologation evidence, and production warranty release.
+
+### Second-Generation Engine Opportunity — Purpose-Built Three-Cylinder Generator Engine
+
+The baseline concept uses the production 1.5 litre mStallion TGDi, a four-cylinder unit with four cylinders of approximately 375 cc each. Mahindra also produces the 2.0 litre mStallion TGDi — a four-cylinder unit with four cylinders of approximately 500 cc each — which currently powers the petrol ICE powertrain variants.
+
+The proposed derivative takes the individual cylinder architecture from the 2.0 litre unit and applies it to a purpose-built three-cylinder configuration: three cylinders of approximately 500 cc each, giving 1.5 litres total displacement. This is not a downsized version of the baseline 1.5 litre engine; it is a different geometry entirely — the same per-cylinder swept volume as the 2.0 litre mStallion, reduced to three cylinders rather than four.
+
+The thermal efficiency argument follows directly from the geometry. A 375 cc cylinder has a higher surface-to-volume ratio than a 500 cc cylinder at the same stroke-to-bore proportion. More combustion chamber surface relative to working volume means more heat rejected to coolant per cycle, lower indicated mean effective pressure, and a harder path to high BTE. The 3-cylinder 1.5 litre derivative inherits the larger, better-proportioned combustion chamber from the 2.0 litre unit, recovers that heat loss advantage, and reduces total friction through fewer reciprocating components simultaneously.
+
+On top of the geometric gain, the generator-only operating regime removes every calibration constraint that a road-following engine carries:
+
+- No cold-start driveability requirement limiting the expansion ratio. Miller cycle valve timing can be pushed further than any production traction engine tolerates.
+- No wide road-load sweep requiring combustion stability across partial throttle points. Every operating point is a pre-validated fixed island.
+- No NVH requirement across the full RPM band. Active engine mounts and acoustic enclosure can be optimised for six discrete RPM targets rather than the continuous road range.
+- Three-cylinder primary imbalance, which is unacceptable in a road-following NVH context, is managed by a balance shaft — a known solution — and does not constrain combustion design choices.
+
+The combustion strategy for this derivative would combine: a dedicated high-expansion-ratio Miller cycle (not a mild VVT offset), split injection with spray-guided stratification, and cooled EGR throughout. Split injection divides the total fuel mass for each cycle into two timed events: an early injection during the intake or early compression stroke lays down a homogeneous base charge, and a late compression injection delivers a locally rich pilot zone near the spark plug. The plug ignites the rich zone reliably; the flame front propagates into the leaner surrounding charge, achieving stable combustion at bulk lambda values of approximately 1.5–1.6 at the lower lean-capable bands (30–55 kW) — well beyond what a single continuous injection can sustain without misfire, and the principal region where generator-only fixed-point operation delivers its BTE advantage over general-duty calibration. This is a conservative stated target, consistent with published lean-burn combustion literature for stratified-charge engines; the efficiency target for this band region is aligned with the Nissan third-generation e-POWER class (ZR15DDTe). At the upper bands (70–105 kW), the Miller offset reduces progressively as output demand rises. At 90–105 kW, lambda approaches 1 and the injection strategy changes: the compression stroke runs to completion first — the charge is already at high pressure before fuel is introduced — and a single well-timed injection then creates a fully homogeneous stoichiometric mixture for ignition. This takes maximum advantage of the thermodynamic work available from the compressed charge before combustion begins. Stratification is neither needed nor appropriate at these bands, where full three-way-catalyst capability, combustion stability, and continuous-duty durability are the governing constraints.
+
+Nissan's e-POWER programme is the clearest production demonstration of exactly this logic across three generations. The original Note e-POWER uses a 1.2 litre three-cylinder engine operating purely as a generator. The second-generation Qashqai and X-Trail e-POWER use a 1.5 litre three-cylinder VC-Turbo unit (KR15DDT) with variable compression ratio, for which Nissan claims approximately 50% thermal efficiency in generator-only duty. The third-generation e-POWER (ZR15DDTe engine family) is the more directly relevant reference: Nissan dropped the variable compression ratio mechanism entirely and instead achieves high BTE through ultra-high exhaust gas recirculation and optimised combustion chamber flows at a fixed operating RPM. Because the engine runs at a single fixed speed to generate electricity, the variable compression ratio hardware becomes redundant — it existed to handle load variation across a driving range that a generator-only engine never sees. The third-generation result confirms that a purpose-designed three-cylinder generator engine at fixed operating points, with high EGR and a dedicated combustion strategy, can reach high BTE without variable compression ratio hardware. In all three generations Nissan chose a three-cylinder configuration for the generator role — fewer, larger cylinders at the target displacement — and attributes the BTE improvement explicitly to the fixed-point generator-only operating regime. That is the same argument this derivative is making.
+
+The 2.0-litre-cylinder-architecture derivative described here is architecturally closer to the third-generation e-POWER path than to the VC-Turbo. Both reach for high BTE through dedicated combustion geometry, high EGR, and fixed-point generator operation rather than variable compression ratio. This derivative adds split injection with spray-guided stratification and a dedicated high-expansion-ratio Miller cycle calibration on top of the larger per-cylinder geometry — all within existing combustion hardware categories that do not require a novel mechanism.
+
+**Provisional BTE projection — three-cylinder 500 cc generator engine:**
+
+| Band | HV DC output | Baseline concept BTE | Derivative projected BTE |
+|---|---|---|---|
+| 1 | 30 kW | 38.5–40.0% | 44–47% |
+| 2 | 40 kW | 37.5–39.0% | 43–46% |
+| 3 | 55 kW | 36.5–38.0% | 42–44% |
+| 4 | 70 kW | 35.0–37.0% | 40–42% |
+| 5 | 90 kW | 33.5–35.5% | 37–40% |
+| 6 | 105 kW | 31.5–34.0% | 36–38% |
+
+These are first-principles estimates, not validated targets. The lower-band gains (30–55 kW) are driven by four compounding factors: the larger per-cylinder geometry reducing surface-to-volume heat loss, the deep dedicated Miller cycle calibration unconstrained by traction duty, λ 1.5–1.6 lean combustion reducing pumping losses and improving specific heat ratio, and generator-only fixed-point operation removing every traction calibration constraint. Upper-band gains (90–105 kW) are smaller because full-load stoichiometric combustion limits apply regardless of architecture.
+
+**Competitive efficiency implication — series path versus DHT direct drive:**
+
+The structural argument against a series REEV at highway cruise is that the generator-motor electrical path carries a round-trip conversion loss of approximately 13–15% (generator ~93%, inverter ~97%, motor ~95% ≈ 0.86 combined). A DHT PHEV can lock the engine mechanically to the wheels at steady speed, achieving direct-drive efficiency of approximately 35–37% well-to-wheel at highway cruise loads. With the baseline concept engine at 36–38% BTE, the series path delivers approximately 31–33% well-to-wheel at highway cruise — a real and structural gap.
+
+The derivative engine changes this arithmetic. At the 30–55 kW bands — the typical DC bus demand range for 85–100 km/h steady cruise at touring mass — the projected 44–47% BTE through the series path delivers approximately 38–40% well-to-wheel. This crosses over the DHT direct-drive path. The series disadvantage, structural with a baseline engine, becomes conditional with the derivative: it only reasserts at the upper bands (90–105 kW, lambda approaching 1, ~36–38% BTE) under sustained high-speed or high-grade demand — a small fraction of total kilometres.
+
+This crossover follows directly from the generator-only operating regime enabling combustion optimisation that a dual-duty engine cannot achieve, not from any fundamentally different technology. This derivative requires a purpose-built engine programme and is outside the current concept scope. It is recorded here as a documented architectural opportunity grounded in existing Mahindra engine technology.
 
 ---
 

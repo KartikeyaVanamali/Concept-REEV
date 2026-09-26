@@ -2,7 +2,7 @@
 
 A concept study for a Range-Extended Electric Vehicle (REEV) on the Mahindra INGLO / XEV 9S skateboard, in XUV 7XO proportions. Daily driving runs entirely on battery. A 1.5 litre mStallion TGDi generator — not the 7XO’s 2.0 petrol — takes over on long trips. The engine never turns a wheel.
 
-> **Status:** Pre-feasibility concept. All figures are transparent design targets and calculation assumptions — not certified test results.
+> **Status:** Pre-feasibility concept. Figures are one of: design target, road-load model output, or externally sourced published specification — clearly distinguished in the engineering document. None are experimentally validated or certified results.
 
 ---
 
@@ -23,8 +23,8 @@ A REEV drives like a pure electric vehicle every day. The petrol engine has **no
 | Kerb mass | ~2,300 kg | ~2,500 kg |
 
 **Common to both variants:**
-- Mahindra 1.5L mStallion TGDi turbocharged petrol engine (~163 hp)
-- 105 kW peak generator HV DC output
+- Mahindra 1.5L mStallion TGDi turbocharged petrol engine (~163 hp) — design target, generator-derivative calibration not yet validated
+- 105 kW continuous HV DC generator output (design target; 30/40/55/70/90/105 kW provisional bands)
 - 42 litre petrol tank
 - Up to 180 kW DC fast charging
 - Combined system range: ~800–885 km on a full charge and full tank
